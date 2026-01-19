@@ -1,4 +1,4 @@
-import { Award, CheckCircle2 } from "lucide-react";
+import { BadgeCheck, CheckCircle2 } from "lucide-react";
 
 const certifications = [
   {
@@ -204,15 +204,18 @@ const colorClasses = {
 
 export function Certifications() {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-6 bg-white/50 dark:bg-gray-900/50 transition-colors relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      
+      <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
-            <Award className="w-6 h-6 text-blue-400" />
-            <h2 className="text-4xl md:text-5xl">Certifications</h2>
+            <BadgeCheck className="w-6 h-6 text-green-400" />
+            <h2 className="text-4xl md:text-5xl text-gray-900 dark:text-white">Certifications</h2>
           </div>
-          <p className="text-gray-400 text-lg">
-            Continuous learning and professional development
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            Continuous Learning & Professional Development
           </p>
         </div>
         
@@ -227,25 +230,26 @@ export function Certifications() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className={`p-3 rounded-lg ${colors.bg} border ${colors.border}`}>
-                    <Award className={`w-8 h-8 ${colors.text}`} />
+                    <BadgeCheck className={`w-8 h-8 ${colors.text}`} />
                   </div>
-                  <span className="px-3 py-1 bg-gray-800 border border-gray-700 rounded-full text-xs text-gray-300">
+                  <span className="px-3 py-1 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-xs text-gray-700 dark:text-gray-300">
                     {cert.date}
                   </span>
                 </div>
                 
-                <h3 className="text-xl mb-2 group-hover:text-white transition-colors">
+                <h3 className="text-xl mb-2 text-gray-900 dark:text-white group-hover:text-gray-800 dark:group-hover:text-white transition-colors">
                   {cert.title}
                 </h3>
+                
                 <p className={`mb-4 ${colors.text}`}>{cert.issuer}</p>
                 
                 <div className="space-y-2">
-                  <p className="text-sm text-gray-400">Key Skills:</p>
+                  <p className="text-sm text-gray-700 dark:text-gray-400">Key Skills:</p>
                   <div className="flex flex-wrap gap-2">
                     {cert.skills.map((skill, i) => (
                       <span 
                         key={i}
-                        className="inline-flex items-center gap-1 px-2 py-1 bg-gray-800/50 border border-gray-700 rounded text-xs text-gray-300"
+                        className="inline-flex items-center gap-1 px-2 py-1 bg-gray-200 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded text-xs text-gray-700 dark:text-gray-300"
                       >
                         <CheckCircle2 className="w-3 h-3" />
                         {skill}

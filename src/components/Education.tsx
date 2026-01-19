@@ -72,15 +72,15 @@ const colorClasses = {
 
 export function Education() {
   return (
-    <section className="py-20 px-6 bg-gray-900/50">
+    <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900/50 transition-colors">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
             <GraduationCap className="w-6 h-6 text-blue-400" />
-            <h2 className="text-4xl md:text-5xl">Education</h2>
+            <h2 className="text-4xl md:text-5xl text-gray-900 dark:text-white">Education</h2>
           </div>
-          <p className="text-gray-400 text-lg">
-            Strong academic foundation in computer science and mathematics
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            Academic Excellence & Continuous Learning
           </p>
         </div>
         
@@ -104,9 +104,9 @@ export function Education() {
                       <div>
                         <h3 className="text-2xl mb-1">{edu.degree}</h3>
                         <p className={`text-lg ${colors.icon}`}>{edu.institution}</p>
-                        <p className="text-gray-400 text-sm">{edu.location}</p>
+                        <p className="text-gray-700 dark:text-gray-400 text-sm">{edu.location}</p>
                       </div>
-                      <span className="px-3 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">
+                      <span className="px-3 py-1 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-sm text-gray-700 dark:text-white">
                         {edu.period}
                       </span>
                     </div>
@@ -117,7 +117,7 @@ export function Education() {
                     
                     <ul className="space-y-2">
                       {edu.highlights.map((highlight, i) => (
-                        <li key={i} className="flex items-start gap-2 text-gray-300">
+                        <li key={i} className="flex items-start gap-2 text-gray-700 dark:text-gray-300">
                           <span className={`inline-block w-1.5 h-1.5 rounded-full ${colors.icon} mt-2`}></span>
                           <span>{highlight}</span>
                         </li>
@@ -134,25 +134,25 @@ export function Education() {
         <div className="p-6 rounded-xl border border-gray-600/30 bg-gray-600/10 backdrop-blur-sm">
           <div className="flex items-start gap-4">
             <div className="p-3 rounded-lg bg-gray-600/10 border border-gray-600/30">
-              <Award className="w-6 h-6 text-gray-400" />
+              <Award className="w-6 h-6 text-gray-700 dark:text-gray-400" />
             </div>
             
             <div className="flex-1">
-              <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+              <div className="flex items-start justify-between gap-4 mb-4">
                 <div>
-                  <h3 className="text-xl mb-1">{secondary.institution}</h3>
-                  <p className="text-gray-400">{secondary.qualification}</p>
-                  <p className="text-gray-500 text-sm">{secondary.location}</p>
+                  <h3 className="text-xl mb-1 text-gray-900 dark:text-white">{secondary.institution}</h3>
+                  <p className="text-gray-700 dark:text-gray-400">{secondary.qualification}</p>
+                  <p className="text-gray-600 dark:text-gray-500 text-sm">{secondary.location}</p>
                 </div>
-                <span className="px-3 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm">
+                <span className="px-3 py-1 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-sm text-gray-700 dark:text-white">
                   {secondary.period}
                 </span>
               </div>
               
-              <ul className="space-y-2 mt-4">
+              <ul className="space-y-2">
                 {secondary.achievements.map((achievement, i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-300 text-sm">
-                    <span className="inline-block w-1 h-1 rounded-full bg-gray-400 mt-1.5"></span>
+                  <li key={i} className="flex items-start gap-2 text-gray-700 dark:text-gray-300 text-sm">
+                    <span className="inline-block w-1 h-1 rounded-full bg-gray-600 dark:bg-gray-400 mt-1.5"></span>
                     <span>{achievement}</span>
                   </li>
                 ))}

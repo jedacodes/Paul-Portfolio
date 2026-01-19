@@ -85,7 +85,7 @@ const colorClasses = {
 
 export function AboutSkills() {
   return (
-    <section id="about" className="py-20 px-6 bg-gray-900/50 relative overflow-hidden">
+    <section id="about" className="py-20 px-6 bg-white/50 dark:bg-gray-900/50 relative overflow-hidden transition-colors">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -93,13 +93,13 @@ export function AboutSkills() {
       <div className="max-w-6xl mx-auto relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-6">{profile.title}</h2>
+          <h2 className="text-4xl md:text-5xl mb-6 text-gray-900 dark:text-white">{profile.title}</h2>
           <div className="max-w-4xl mx-auto space-y-4">
-            <p className="text-lg text-gray-300 leading-relaxed italic">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
               {profile.intro}
             </p>
             {profile.description.map((paragraph, index) => (
-              <p key={index} className="text-gray-400 leading-relaxed italic">
+              <p key={index} className="text-gray-600 dark:text-gray-400 leading-relaxed italic">
                 {paragraph}
               </p>
             ))}
@@ -118,8 +118,8 @@ export function AboutSkills() {
                 className={`p-4 bg-gradient-to-br ${colors.gradient} border ${colors.border} rounded-xl backdrop-blur-sm hover:scale-105 transition-transform`}
               >
                 <Icon className={`w-6 h-6 ${colors.icon} mb-3`} />
-                <p className="text-2xl mb-1">{stat.value}</p>
-                <p className="text-gray-400 text-xs">{stat.label}</p>
+                <p className="text-2xl mb-1 text-gray-900 dark:text-white">{stat.value}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-xs">{stat.label}</p>
               </div>
             );
           })}
@@ -127,7 +127,7 @@ export function AboutSkills() {
         
         {/* Technical Skills Grid */}
         <div className="mb-12">
-          <h3 className="text-3xl text-center mb-12">
+          <h3 className="text-3xl text-center mb-12 text-gray-900 dark:text-white">
             Technical Expertise
           </h3>
           
@@ -145,14 +145,14 @@ export function AboutSkills() {
                     <div className={`p-3 ${colors.bg} border ${colors.border} rounded-lg`}>
                       <Icon className={`w-6 h-6 ${colors.icon}`} />
                     </div>
-                    <h4 className="text-xl pt-2">{skill.category}</h4>
+                    <h4 className="text-xl pt-2 text-gray-900 dark:text-white">{skill.category}</h4>
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
                     {skill.items.map((item, i) => (
                       <span 
                         key={i}
-                        className="px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-gray-200"
+                        className="px-3 py-1.5 bg-gray-200/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-200"
                       >
                         {item}
                       </span>
@@ -175,11 +175,11 @@ export function AboutSkills() {
               return (
                 <div 
                   key={index}
-                  className="group px-5 py-2.5 bg-gray-800/50 border border-gray-700 rounded-lg backdrop-blur-sm hover:border-blue-500/50 hover:bg-blue-500/10 transition-all"
+                  className="group px-5 py-2.5 bg-gray-200/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg backdrop-blur-sm hover:border-blue-500/50 hover:bg-blue-500/10 transition-all"
                 >
                   <div className="flex items-center gap-2">
-                    <Icon className="w-4 h-4 text-gray-400 group-hover:text-blue-400 transition-colors" />
-                    <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                    <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400 group-hover:text-blue-400 transition-colors" />
+                    <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-white transition-colors">
                       {skill.name}
                     </span>
                   </div>

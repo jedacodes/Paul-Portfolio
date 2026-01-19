@@ -56,43 +56,39 @@ const affiliations = [
 
 export function LeadershipAffiliations() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900/50 transition-colors">
       <div className="max-w-6xl mx-auto">
-        {/* Leadership Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <Users className="w-6 h-6 text-blue-400" />
-              <h2 className="text-4xl md:text-5xl">Leadership & Teaching</h2>
-            </div>
-            <p className="text-gray-400 text-lg">
-              Active involvement in student organizations and educational initiatives
-            </p>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <Users className="w-6 h-6 text-purple-400" />
+            <h2 className="text-4xl md:text-5xl text-gray-900 dark:text-white">Leadership & Affiliations</h2>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {leadership.map((item) => (
-              <div 
-                key={item.id}
-                className="p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm hover:border-blue-500/50 transition-all"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex-1">
-                    <h3 className="text-xl mb-1">{item.role}</h3>
-                    <p className="text-blue-400">{item.organization}</p>
-                  </div>
-                  <span className="px-3 py-1 bg-gray-800 border border-gray-700 rounded-full text-xs">
-                    {item.year}
-                  </span>
-                </div>
-                <p className="text-gray-300 text-sm">{item.description}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            Community Engagement & Professional Memberships
+          </p>
         </div>
         
-        {/* Affiliations Section */}
-        <div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {leadership.map((item) => (
+            <div 
+              key={item.id}
+              className="p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm hover:border-blue-500/50 transition-all"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <div className="flex-1">
+                  <h3 className="text-xl mb-1 text-gray-900 dark:text-white">{item.role}</h3>
+                  <p className="text-blue-400">{item.organization}</p>
+                </div>
+                <span className="px-3 py-1 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-xs text-gray-700 dark:text-white">
+                  {item.year}
+                </span>
+              </div>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-16">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-4">
               <AwardIcon className="w-6 h-6 text-purple-400" />

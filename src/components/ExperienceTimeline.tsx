@@ -145,15 +145,18 @@ const colorClasses = {
 
 export function ExperienceTimeline() {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900/50 transition-colors relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      
+      <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
-            <Briefcase className="w-6 h-6 text-blue-400" />
-            <h2 className="text-4xl md:text-5xl">Professional Experience</h2>
+            <Briefcase className="w-6 h-6 text-purple-400" />
+            <h2 className="text-4xl md:text-5xl text-gray-900 dark:text-white">Professional Experience</h2>
           </div>
-          <p className="text-gray-400 text-lg">
-            A track record of delivering data-driven insights and strategic value
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            Driving Impact Through Data & Strategy
           </p>
         </div>
         
@@ -185,16 +188,16 @@ export function ExperienceTimeline() {
                               <h3 className="text-2xl mb-1">{exp.role}</h3>
                               <p className={`text-lg ${colors.icon}`}>{exp.company}</p>
                             </div>
-                            <span className="px-3 py-1 bg-gray-800 border border-gray-700 rounded-full text-sm text-gray-300">
+                            <span className="px-3 py-1 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-sm text-gray-700 dark:text-gray-300">
                               {exp.period}
                             </span>
                           </div>
                           
-                          <p className="text-gray-400 mb-4">{exp.description}</p>
+                          <p className="text-gray-700 dark:text-gray-400 mb-4">{exp.description}</p>
                           
                           <ul className="space-y-2">
                             {exp.highlights.map((highlight, i) => (
-                              <li key={i} className="flex items-start gap-2 text-gray-300">
+                              <li key={i} className="flex items-start gap-2 text-gray-700 dark:text-gray-300">
                                 <span className={`inline-block w-1.5 h-1.5 rounded-full ${colors.accent} mt-2`}></span>
                                 <span>{highlight}</span>
                               </li>

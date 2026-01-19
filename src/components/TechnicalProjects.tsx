@@ -1,4 +1,4 @@
-import { Code2, Activity, BarChart3, Database, PhoneCall, PieChart, TrendingUp } from "lucide-react";
+import { Briefcase, Activity, BarChart3, Database, PhoneCall, PieChart, TrendingUp } from "lucide-react";
 
 const projects = [
   {
@@ -128,15 +128,15 @@ const colorClasses = {
 
 export function TechnicalProjects() {
   return (
-    <section className="py-20 px-6 bg-gray-900/50">
+    <section className="py-20 px-6 bg-white/50 dark:bg-gray-900/50 transition-colors">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
-            <Code2 className="w-6 h-6 text-blue-400" />
-            <h2 className="text-4xl md:text-5xl">Technical Projects</h2>
+            <Briefcase className="w-6 h-6 text-cyan-400" />
+            <h2 className="text-4xl md:text-5xl text-gray-900 dark:text-white">Technical Projects</h2>
           </div>
-          <p className="text-gray-400 text-lg">
-            Hands-on experience building data-driven solutions
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            Innovative Solutions & Development Work
           </p>
         </div>
         
@@ -157,13 +157,13 @@ export function TechnicalProjects() {
                 <h3 className="text-xl mb-2 group-hover:text-white transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+                <p className="text-gray-700 dark:text-gray-400 mb-4">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
                     <span 
                       key={i}
-                      className="px-2 py-1 bg-gray-800/50 border border-gray-700 rounded text-xs text-gray-300"
+                      className="px-2 py-1 bg-gray-200 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded text-xs text-gray-700 dark:text-gray-300"
                     >
                       {tech}
                     </span>
@@ -172,7 +172,7 @@ export function TechnicalProjects() {
                 
                 <ul className="space-y-2">
                   {project.highlights.map((highlight, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
                       <span className={`inline-block w-1 h-1 rounded-full ${colors.icon} mt-1.5`}></span>
                       <span className="flex-1">{highlight}</span>
                     </li>

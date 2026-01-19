@@ -56,14 +56,14 @@ const colorClasses = {
 
 export function Awards() {
   return (
-    <section className="py-20 px-6 bg-gray-900/50">
+    <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900/50 transition-colors">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
             <Star className="w-6 h-6 text-blue-400" />
-            <h2 className="text-4xl md:text-5xl">Awards & Recognition</h2>
+            <h2 className="text-4xl md:text-5xl text-gray-900 dark:text-white">Awards & Recognition</h2>
           </div>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
             Recognized for excellence in technology and academics
           </p>
         </div>
@@ -85,7 +85,7 @@ export function Awards() {
                     <div className={`p-4 rounded-lg ${colors.bg} border ${colors.border}`}>
                       <Icon className={`w-10 h-10 ${colors.icon}`} />
                     </div>
-                    <span className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-sm">
+                    <span className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-sm text-gray-700 dark:text-white">
                       {award.year}
                     </span>
                   </div>
@@ -94,10 +94,10 @@ export function Awards() {
                     <span className={`text-sm ${colors.icon}`}>{award.achievement}</span>
                   </div>
                   
-                  <h3 className="text-2xl mb-4 group-hover:text-white transition-colors">
+                  <h3 className="text-2xl mb-4 text-gray-900 dark:text-white group-hover:text-gray-800 dark:group-hover:text-white transition-colors">
                     {award.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                     {award.description}
                   </p>
                 </div>
